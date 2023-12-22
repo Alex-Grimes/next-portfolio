@@ -1,0 +1,76 @@
+@use '@/styles/abstract' as *;
+
+::-webkit-scrollbar {
+    width: rem(10px);
+
+    &-track {
+        background-color: alpha(primary, 0.1);
+    }
+
+    &-thumb {
+        background-color: color(primary);
+    }
+}
+
+::selection {
+    background: alpha(text, 0.5);
+    color: color(bg);
+    text-shadow: 0 0 0.1em color(bg);
+}
+
+*,
+*::before,
+*::after {
+    animation-duration: $animation-duration;
+    animation-timing-function: $animation-timing-function;
+}
+
+:root {
+    color: color(text);
+    background-color: color(bg);
+    @include transition(color background-color);
+}
+
+@include set-themes();
+
+textarea {
+    resize: vertical;
+    min-height: 8rem;
+    max-height: 24rem;
+}
+
+.button {
+    border-radius: rem(8px);
+    padding: rem(8px) rem(16px);
+    border: rem(2px) solid $primary;
+    background-color: rgba($primary, 0.9);
+    color: rgba($white, 0.5);
+    @include transition(color background-color, $animation-duration-fast);
+
+    &:not(:disabled) {
+        cursor: pointer;
+        color: $white;
+
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+.svg-inline--fa {
+    height: 1em;
+    margin: auto 0;
+}
+
+@include theme(light) {
+
+    input:autofill,
+    input:autofill,
+    input:autofill:hover,
+    input:autofill:focus,
+    input:autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $black;
+    }
+}

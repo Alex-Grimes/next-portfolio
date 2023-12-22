@@ -1,21 +1,28 @@
 'use client';
 
-import logo from 'public/images/logo.png';
+import clsx from 'clsx';
+import logo from '../../public/logo.gif';
 import {Img} from './image';
+import { Socials } from './socials';
+import { ThemeChanger } from './theme-changer';
+import { useScrollPosition } from '@/hooks';
 
 export const Navbar = () => {
+    const scrollPosition = useScrollPosition();
     return (
-        <nav className="nav">
-            <div className="nav_brand">
-                <Img src={logo} alt='logo' height={36} />
-                <h4 className="nav_title">Alex Grimes</h4>
-                <h4 className="nav_title xs">Alex G.</h4>
+        <nav className={clsx('nav', { min: scrollPosition > 50 })}>
+            <div className='container nav__container'>
+                <div className="nav__brand">
+                    <Img src={logo} alt='logo' height={50} />
+                    <h4 className="nav__title">Alex Grimes</h4>
+                    <h4 className="nav__title xs">Alex G.</h4>
+                </div>
+                <div className="nav__links">
+                    <Socials />
+                    <ThemeChanger />   
+                </div>
             </div>
-            <div className="nav_links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+
         </nav>
     );
 };

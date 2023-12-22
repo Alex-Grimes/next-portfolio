@@ -15,18 +15,18 @@
         padding: 1rem 0;
     }
 
-    &_container {
+    &__container {
         display: flex;
         justify-content: space-between;
     }
 
-    &_brand {
+    &__brand {
         display: flex;
         align-items: center;
         gap: 1rem;
     }
 
-    &_title {
+    &__title {
         margin-bottom: 0;
 
         &:not(.xs) {
@@ -42,7 +42,7 @@
         }
     }
 
-    &_links {
+    &__links {
         display: flex;
         align-items: center;
 
