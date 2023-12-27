@@ -25,6 +25,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  - name: 'Create env file'
+      run: |
+        touch .env
+        echo PERSONAL_ACCESS_TOKEN=${{ secrets.PERSONAL_ACCESS_TOKEN }} > .env
+        cat .env
   # Build job
   build:
     runs-on: ubuntu-latest
