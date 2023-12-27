@@ -3,38 +3,37 @@
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { SyntheticEvent, useState } from 'react';
+import { useState } from 'react';
 
 import { contact } from '@/data';
 
-import { Input } from './input';
-import { Socials } from './socials';
+
 
 export const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [monster, setMonster] = useState('');
-  const [spell, setSpell] = useState('');
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
+  // const [monster, setMonster] = useState('');
+  // const [spell, setSpell] = useState('');
   const [success, setSuccess] = useState(false);
   const [cardactivated, setCardactivated] = useState(false);
 
-  const handleSubmit = async (e: SyntheticEvent) => {
-    e.preventDefault();
+  // const handleSubmit = async (e: SyntheticEvent) => {
+  //   e.preventDefault();
 
-    if (!name || !email || !message) return;
-    if (monster || spell) return setCardactivated(true);
+  //   if (!name || !email || !message) return;
+  //   if (monster || spell) return setCardactivated(true);
 
-    const res = await fetch('/api/contact', {
-      body: JSON.stringify({ name, email, message }),
-      headers: { 'Content-Type': 'application/json' },
-      method: 'POST',
-    });
+  //   const res = await fetch('/api/contact', {
+  //     body: JSON.stringify({ name, email, message }),
+  //     headers: { 'Content-Type': 'application/json' },
+  //     method: 'POST',
+  //   });
 
-    const { error } = await res.json();
-    if (error) return setSuccess(false);
-    setSuccess(true);
-  };
+  //   const { error } = await res.json();
+  //   if (error) return setSuccess(false);
+  //   setSuccess(true);
+  // };
 
   return (
     <section className='home section contact'>
