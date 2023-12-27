@@ -9,7 +9,7 @@ export const Hero = () => {
     const duration = 1000;
     const line1Delay = delay + hero.line1.length * speed + duration;
     const line2Delay = line1Delay + hero.line2.length * speed + duration;
-    const line3Delay = line2Delay + hero.line3.length * speed + duration;
+
 
   
 
