@@ -13,7 +13,7 @@ export const revalidate = 60;
 
 const getRepos = async () => {
   const octokit = new Octokit({ auth: process.env.PERSONAL_ACCESS_TOKEN });
-  const res = await octokit.request(`GET /user/repos`, {
+  const res = await octokit.request(`GET /app/repos`, {
     type: 'public',
     page: 1,
     per_page: 18,
