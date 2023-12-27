@@ -19,6 +19,7 @@ const getRepos = async () => {
     per_page: 18,
     sort: 'created',
     direction: 'desc',
+    auth: process.env.PERSONAL_ACCESS_TOKEN 
   });
   const repos: ReposType = res.data;
   return repos;
