@@ -6,6 +6,7 @@ import { Contact } from '@/components/contact';
 import { Experience } from '@/components/experience';
 import { Hero } from '@/components/hero';
 import { Projects } from '@/components/projects';
+export const dynamic = "force-dynamic";
 
 type ReposType = Endpoints['GET /user/repos']['response']['data'];
 
@@ -19,7 +20,6 @@ const getRepos = async () => {
     per_page: 18,
     sort: 'created',
     direction: 'desc',
-    auth: process.env.PERSONAL_ACCESS_TOKEN 
   });
   const repos: ReposType = res.data;
   return repos;
