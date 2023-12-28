@@ -7,7 +7,7 @@ export const experience: Experience[] = [
         title: `Software Engineer`,
         description: `Designed, developed, and maintained numerous systems and applications.
         \nCollaborated with cross-functional teams, including designers, project managers, stakeholders, and other developers, to deliver high-quality solutions.
-        \n deployments and environments through well-defined CI/CD pipelines.`,
+        \nEnhanced deployments and environments through well-defined CI/CD pipelines.`,
         company: `North Wind Group`,
         url: `https://northwindgrp.com/`,
     },
@@ -17,7 +17,7 @@ export const experience: Experience[] = [
         title: `Software Engineer`,
         description: `Developed, and maintained numerous systems and applications.
         \nCollaborated with cross-functional teams, including designers, project managers, stakeholders, and other developers, to deliver high-quality solutions.
-        \n deployments and environments through well thought out SOP's and scripted deployments.`,
+        \nPerformed deployments and environments through well thought out SOP's and scripted deployments.`,
         company: `Michelin`,
         url: `https://www.michelinman.com/`,
     },
@@ -26,8 +26,8 @@ export const experience: Experience[] = [
         year: '2018-2021',
         title: `Application Administrator`,
         description: `Adapted and customized existing applications to meet specific client needs, modifying source code.
-        \n Provided Level 2 technical support, resolving complex technical issues and diagnosing system performance across various platforms.
-        \n Collaborated with cross-functional teams, including designers, project managers, stakeholders, and other developers, to deliver high-quality solutions.`,
+        \nProvided Level 2 technical support, resolving complex technical issues and diagnosing system performance across various platforms.
+        \nCollaborated with cross-functional teams, including designers, project managers, stakeholders, and other developers, to deliver high-quality solutions.`,
         company: `NWN Carousel`,
         url: `https://nwncarousel.com/`,
     },
